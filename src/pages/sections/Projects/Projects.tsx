@@ -1,30 +1,29 @@
-
 import { Box, Typography, IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Importa o ícone do LinkedIn
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
-import image1 from '../../../assets/images/wilker3.jpeg'
+import image1 from '../../../assets/images/hooda.jpg'
 
 const projects = [
   {
     id: 1,
     title: "Sistema de Comanda",
     description: "Um sistema completo para gerenciamento de comandas em restaurantes.",
-    imageUrl: image1, // Usa a imagem importada
+    imageUrl: image1,
     githubUrl: "https://github.com/Wil220"
   },
   {
     id: 2,
     title: "Site Pessoal com React e Tailwind",
     description: "Meu site pessoal desenvolvido com React e estilizado com Tailwind CSS.",
-    imageUrl: image1, // Usa a imagem importada
+    imageUrl: image1, 
     githubUrl: "https://github.com/Wil220l"
   },
   {
     id: 3,
     title: "Aplicativo de Farmácia com React e Vite",
     description: "Aplicativo para farmácias desenvolvido com React e Vite.",
-    imageUrl: image1, // Usa a imagem importada
+    imageUrl: image1, 
     githubUrl: "https://github.com/Wil220"
   },
 ];
@@ -61,7 +60,7 @@ const Projects = () => {
             display="flex"
             flexDirection="column"
             alignItems="center"
-            maxWidth="100%" // Garante que o Box do projeto não ultrapasse o container
+            maxWidth="100%" 
           >
             <img 
               src={project.imageUrl} 
@@ -70,7 +69,7 @@ const Projects = () => {
                 width: '100%', 
                 height: 'auto', 
                 borderRadius: '8px',
-                maxWidth: '100%' // Garante que a imagem se ajuste corretamente
+                maxWidth: '100%' 
               }} 
             />
             <Typography variant="h6" mt={2} gutterBottom>
@@ -85,7 +84,7 @@ const Projects = () => {
               rel="noopener noreferrer"
               color="inherit"
             >
-              <GitHubIcon />
+              <GitHubIcon fontSize="large" />
             </IconButton>
           </Box>
         ))}
@@ -94,9 +93,12 @@ const Projects = () => {
       <Box
         display="flex"
         justifyContent="center"
-        mt={4}
-        mb={2}
         width="100%"
+        position="absolute"
+        bottom={0} 
+        left={0}
+        p={4}
+        bgcolor="#232323"
       >
         <IconButton 
           href="https://github.com/Wil220" 
@@ -104,7 +106,7 @@ const Projects = () => {
           rel="noopener noreferrer"
           color="inherit"
         >
-          <GitHubIcon />
+          <GitHubIcon fontSize="large" /> 
         </IconButton>
         <IconButton 
           href="https://www.linkedin.com/in/wilker-silva-3a0ab2273/" 
@@ -112,7 +114,7 @@ const Projects = () => {
           rel="noopener noreferrer"
           color="inherit"
         >
-          <LinkedInIcon />
+          <LinkedInIcon fontSize="large" /> 
         </IconButton>
       </Box>
     </Box>
