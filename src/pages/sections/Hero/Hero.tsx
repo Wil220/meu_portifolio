@@ -13,11 +13,13 @@ const Hero = () => {
       display: "flex",
       alignItems: "center",
       [theme.breakpoints.up('xs')]: { 
+     
           paddingTop: "100px",
 
       },
       [theme.breakpoints.up('md')]: { 
-          paddingTop: "0",
+
+          paddingTop: "0px",
       }
   }))
 
@@ -34,7 +36,7 @@ const Hero = () => {
                   <Grid container spacing={2}>
                       <Grid item xs={12} md={5}>
                           <Box position="relative">
-                              <Box position="absolute" width={"150%"} top={-100} right={0}>
+                              <Box position="absolute" width={"155%"} top={-100} right={-100}>
                                   <AnimatedBackground />
                               </Box>
                               <Box position="relative" textAlign="center">
@@ -44,10 +46,10 @@ const Hero = () => {
                       </Grid>
                       <Grid item xs={12} md={7}>
                           <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2}>Wilker Silva</Typography>
-                          <Typography color="primary.contrastText" variant="h2" textAlign="center" >I am a full stack developer</Typography>
+                          <Typography color="primary.contrastText" variant="h2" textAlign="center" >I'am a full stack developer</Typography>
                           <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                               <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                  <StyledButton>
+                                  <StyledButton onClick={()=> console.log("download")}>
                                       <CloudUploadIcon />
                                       <Typography>
                                           Download CV
@@ -55,7 +57,7 @@ const Hero = () => {
                                   </StyledButton>
                               </Grid>
                               <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                  <StyledButton>
+                                  <StyledButton onClick={()=> console.log("contact")}>
                                       <MailOutlineIcon />
                                       <Typography>
                                           Contact me

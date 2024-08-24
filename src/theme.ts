@@ -10,7 +10,8 @@ let theme = createTheme({
         },
     },
     typography: {
-        fontFamily: ['"Helvetica Neue"'
+        fontFamily: [
+            'BlinkMacSystemFont',
         ].join(','),
     }
 });
