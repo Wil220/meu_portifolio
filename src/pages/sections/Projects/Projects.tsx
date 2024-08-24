@@ -16,14 +16,14 @@ const projects = [
     id: 2,
     title: "Site Pessoal com React e Tailwind",
     description: "Meu site pessoal desenvolvido com React e estilizado com Tailwind CSS.",
-    imageUrl: image1, 
+    imageUrl: image1,
     githubUrl: "https://github.com/Wil220l"
   },
   {
     id: 3,
     title: "Aplicativo de Farmácia com React e Vite",
     description: "Aplicativo para farmácias desenvolvido com React e Vite.",
-    imageUrl: image1, 
+    imageUrl: image1,
     githubUrl: "https://github.com/Wil220"
   },
 ];
@@ -60,7 +60,7 @@ const Projects = () => {
             display="flex"
             flexDirection="column"
             alignItems="center"
-            maxWidth="100%" 
+            maxWidth="100%"
           >
             <img 
               src={project.imageUrl} 
@@ -83,8 +83,9 @@ const Projects = () => {
               target="_blank" 
               rel="noopener noreferrer"
               color="inherit"
+              sx={{ fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '4rem' } }}
             >
-              <GitHubIcon fontSize="large" />
+              <GitHubIcon />
             </IconButton>
           </Box>
         ))}
@@ -94,27 +95,30 @@ const Projects = () => {
         display="flex"
         justifyContent="center"
         width="100%"
-        position="absolute"
-        bottom={0} 
+        position="fixed" 
+        bottom={0}
         left={0}
-        p={4}
+        p={2}
         bgcolor="#232323"
+        gap={2} 
       >
         <IconButton 
           href="https://github.com/Wil220" 
           target="_blank" 
           rel="noopener noreferrer"
           color="inherit"
+          sx={{ fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '4rem' } }} 
         >
-          <GitHubIcon fontSize="large" /> 
+          <GitHubIcon />
         </IconButton>
         <IconButton 
           href="https://www.linkedin.com/in/wilker-silva-3a0ab2273/" 
           target="_blank" 
           rel="noopener noreferrer"
           color="inherit"
+          sx={{ fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '4rem' } }}
         >
-          <LinkedInIcon fontSize="large" /> 
+          <LinkedInIcon />
         </IconButton>
       </Box>
     </Box>
