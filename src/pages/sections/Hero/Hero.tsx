@@ -3,8 +3,30 @@ import Wilker from '../../../assets/images/wilker3.jpeg';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { AnimatedBackground } from '../../../components/AnimatedBackground/AnimatedBackgorund';
+import { useState, useEffect } from 'react';
 
 const Hero = () => {
+  // Animação de digitação com useState e useEffect
+  const [text, setText] = useState('');
+  const fullText = "I'm a Full Stack Developer";
+  const typingSpeed = 150;
+
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      setText((prev) => {
+        // Adiciona a próxima letra
+        const newText = prev + fullText[index];
+        index++;
+        if (index >= fullText.length) {
+          clearInterval(timer); // Limpa o intervalo após completar o texto
+        }
+        return newText;
+      });
+    }, typingSpeed);
+
+    return () => clearInterval(timer); // Limpa o intervalo ao desmontar o componente
+  }, []);
 
   const StyledHero = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
@@ -32,6 +54,7 @@ const Hero = () => {
           <Grid item xs={12} md={5}>
             <Box position="relative">
               <Box position="absolute" width={"155%"} top={-100} right={-100}>
+                {/* AnimatedBackground deve começar apenas uma vez ao carregar */}
                 <AnimatedBackground />
               </Box>
               <Box position="relative" textAlign="center">
@@ -44,7 +67,7 @@ const Hero = () => {
               Wilker Silva
             </Typography>
             <Typography color="primary.contrastText" variant="h2" textAlign="center">
-              I'am a Full Stack Developer
+              {text} {/* Texto com efeito de digitação */}
             </Typography>
             <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
               <Grid item xs={12} md={4} display="flex" justifyContent="center">
@@ -63,7 +86,7 @@ const Hero = () => {
                 <Button
                   variant="contained"
                   color="primary"
-                  href="wilker.silva0714@gmail.com" 
+                  href="mailto:wilker.silva0714@gmail.com" 
                   target="_self"
                   startIcon={<MailOutlineIcon />}
                 >

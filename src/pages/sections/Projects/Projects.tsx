@@ -1,8 +1,7 @@
 import { Box, Typography, IconButton } from '@mui/material';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-
-import image1 from '../../../assets/images/hooda.jpg'
+import image1 from '../../../assets/images/hooda.jpg';
 
 const projects = [
   {
@@ -61,6 +60,7 @@ const Projects = () => {
             flexDirection="column"
             alignItems="center"
             maxWidth="100%"
+            sx={{ position: 'relative', overflow: 'hidden', pb: 4 }}
           >
             <img 
               src={project.imageUrl} 
@@ -69,7 +69,8 @@ const Projects = () => {
                 width: '100%', 
                 height: 'auto', 
                 borderRadius: '8px',
-                maxWidth: '100%' 
+                maxWidth: '100%',
+                objectFit: 'cover', 
               }} 
             />
             <Typography variant="h6" mt={2} gutterBottom>
@@ -107,7 +108,7 @@ const Projects = () => {
           target="_blank" 
           rel="noopener noreferrer"
           color="inherit"
-          sx={{ fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '4rem' } }} 
+          sx={{ fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '4rem' } }}
         >
           <GitHubIcon />
         </IconButton>
@@ -116,7 +117,7 @@ const Projects = () => {
           target="_blank" 
           rel="noopener noreferrer"
           color="inherit"
-          sx={{ fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '4rem' } }}
+          sx={{ fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '4rem' } }} 
         >
           <LinkedInIcon />
         </IconButton>
