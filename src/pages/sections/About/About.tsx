@@ -14,10 +14,13 @@ const About = () => {
         About Me
       </Typography>
       <Typography variant="body1" paragraph>
-        Olá, meu nome é Wilker e sou desenvolvedor Full Stack. Tenho experiência em várias tecnologias como React, Node.js, e MongoDB.
-      </Typography>
-      <Typography variant="body1" paragraph>
-        Gosto de criar soluções inovadoras e estou sempre em busca de novos desafios no mundo da programação.
+      Sou um profissional em busca de novas oportunidades na área de tecnologia, após concluir um bootcamp intensivo da Generation Brasil, onde adquiri uma sólida base em programação e desenvolvimento de software. Atualmente, estou iniciando meus estudos na Escola da Nuvem, com foco em serviços e soluções AWS, e estou em busca de uma oportunidade para aplicar esses conhecimentos na prática.
+
+Minha experiência anterior como atendente aprimorou minhas habilidades interpessoais e a capacidade de trabalhar de forma colaborativa em equipe. Agora, estou determinado a enfrentar novos desafios no setor de tecnologia. Comprometido em aprender e crescer profissionalmente, meu objetivo é contribuir de maneira significativa para o sucesso da empresa.
+
+Recentemente, conquistei o segundo lugar em um hackathon organizado por Claudera, um marco importante que demonstra minha capacidade de inovar e me destacar em competições técnicas.
+
+Se você procura um profissional dedicado, com forte vontade de evoluir, estou à disposição para conversarmos!
       </Typography>
     </div>
   )
